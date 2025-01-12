@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Absences - Étudiant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-gray-100 h-screen">
+
+    <div class="flex h-full">
+        <div id="sidebar" class="w-64 bg-[#06045A] text-white flex flex-col transition-all duration-300">
+            <div class="p-4 flex justify-between items-center">
+              <div class="flex items-center space-x-2">
+                <h1 class="text-2xl font-bold">Ecole 221</h1>
+              </div>
+              <button id="toggleSidebar" class="text-white bg-white text-2xl focus:outline-none mt-2 h-8 rounded">
+                <i class='bx bx-chevron-left text-black'></i>
+              </button>
+            </div>
+            <nav class="flex-grow">
+              <ul>
+                <li class="px-6 py-2 hover:bg-blue-700 flex items-center mt-5 space-x-2">
+                  <a href="#" class="text-lg flex items-center space-x-2">
+                    <span class="material-icons text-blue-400">dashboard</span>
+                    <span class="menu-text">Dashboard</span>
+                  </a>
+                </li>
+                <li class="px-6 py-2 hover:bg-blue-700 flex items-center space-x-2">
+                  <a href="listeCours.html" class="text-lg flex items-center space-x-2">
+                    <span class="material-icons text-yellow-400">book</span>
+                    <span class="menu-text">Liste Cours</span>
+                  </a>
+                </li>
+                <li class="px-6 py-2 hover:bg-blue-700 flex items-center space-x-2">
+                  <a href="listeAbsence.html" class="text-lg flex items-center space-x-2">
+                    <span class="material-icons text-red-400">event_note</span>
+                    <span class="menu-text">Liste Absence</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="p-4 border-t border-blue-700 bg-[#06045A]">
+              <a href="login.html" class="flex items-center space-x-2">
+                <button class="w-full bg-red-500 text-white hover:bg-red-600 py-2 rounded flex items-center justify-center">
+                  <span class="material-icons mr-2">logout</span>
+                  <span class="menu-text">Déconnexion</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        <div class="flex-grow flex flex-col">
+            <header class="bg-white shadow p-4 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-gray-700">Bienvenue dans l'espace étudiant</h2>
+                <div class="flex items-center space-x-4">
+                    <div class="text-right">
+                        <p class="text-gray-700 font-semibold">Jean Dupont</p>
+                        <p class="text-sm text-gray-500">Étudiant</p>
+                    </div>
+                    <img src="https://via.placeholder.com/40" alt="Profil"
+                        class="w-10 h-10 rounded-full border border-gray-300">
+                </div>
+            </header>
+            <main class="flex-grow p-6">
+                <div class="bg-white p-6 rounded-lg shadow mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Liste de mes Absences</h3>
+                    <table class="table-auto w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-[#06045A] text-white">
+                                <th class="border border-gray-300 px-4 py-2">Module</th>
+                                <th class="border border-gray-300 px-4 py-2">Date</th>
+                                <th class="border border-gray-300 px-4 py-2">Heure</th>
+                                <th class="border border-gray-300 px-4 py-2">État</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white hover:bg-gray-100">
+                                <td class="border border-gray-300 px-4 py-2">UML</td>
+                                <td class="border border-gray-300 px-4 py-2">10/12/2023</td>
+                                <td class="border border-gray-300 px-4 py-2">08:00 - 10:00</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center text-red-500">
+                                    non justifiée
+                                </td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-100">
+                                <td class="border border-gray-300 px-4 py-2">UI/UX</td>
+                                <td class="border border-gray-300 px-4 py-2">11/12/2023</td>
+                                <td class="border border-gray-300 px-4 py-2">10:00 - 12:00</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center text-green-500">
+                                    Justifiée
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="flex justify-center mt-10">
+                        <nav class="flex space-x-2">
+                          <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">Précédent</button>
+                          <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">1</button>
+                          <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">2</button>
+                          <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">3</button>
+                          <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">Suivant</button>
+                        </nav>
+                      </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="../src/script.js"></script>
+
+</body>
+
+</html>

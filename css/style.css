@@ -1,0 +1,10 @@
+    /* Ajoutons une transition pour le déplacement du bouton */
+    #toggleSidebar {
+        transition: transform 0.3s ease;
+      }
+  
+      /* Lorsque la sidebar est fermée (taille 20), on déplace le bouton sous "Ecole 221" */
+      #sidebar.w-20 #toggleSidebar {
+        transform: translateY(50px);
+      }
+      

@@ -1,0 +1,218 @@
+{
+    "Etudiants": [
+      {
+        "idEtudiant": 1,
+        "nom": "Oumar Ndiaye",
+        "adresse": "Dakar, Point E",
+        "login": "oumar@gmail.com",
+        "pwd": "password123",
+        "idClasse": 1
+      },
+      {
+        "idEtudiant": 2,
+        "nom": "Fatou Diop",
+        "adresse": "Thiès, Grand Standing",
+        "login": "fatou@gmail.com",
+        "pwd": "passer",
+        "idClasse": 2
+      },
+      {
+        "idEtudiant": 3,
+        "nom": "Moussa Sarr",
+        "adresse": "Saint-Louis, Sor",
+        "login": "moussa@gmail.com",
+        "pwd": "password123",
+        "idClasse": 1
+      },
+      {
+        "idEtudiant": 4,
+        "nom": "Awa Ba",
+        "adresse": "Kaolack, Médina",
+        "login": "awa@gmail.com",
+        "pwd": "password123",
+        "idClasse": 3
+      }
+    ],
+    "Classes": [
+      {
+        "idClasse": 1,
+        "nom": "L1DWM",
+        "idNiveau": 1
+      },
+      {
+        "idClasse": 2,
+        "nom": "L2DN",
+        "idNiveau": 2
+      },
+      {
+        "idClasse": 3,
+        "nom": "L3DWM",
+        "idNiveau": 3
+      }
+    ],
+    "Cours": [
+      {
+        "idCours": 1,
+        "module": "UML",
+        "idClasse": 1,
+        "idSemestre": 1,
+        "idProf": 1
+      },
+      {
+        "idCours": 2,
+        "module": "UI/UX",
+        "idClasse": 2,
+        "idSemestre": 1,
+        "idProf": 2
+      },
+      {
+        "idCours": 3,
+        "module": "Java",
+        "idClasse": 1,
+        "idSemestre": 2,
+        "idProf": 1
+      },
+      {
+        "idCours": 4,
+        "module": "Python",
+        "idClasse": 3,
+        "idSemestre": 2,
+        "idProf": 2
+      }
+    ],
+    "Semestres": [
+      {
+        "idSemestre": 1,
+        "nom": "Semestre 1",
+        "etat": "en cours"
+      },
+      {
+        "idSemestre": 2,
+        "nom": "Semestre 2",
+        "etat": "passé"
+      }
+    ],
+    "Professeurs": [
+      {
+        "idProf": 1,
+        "nom": "M.  Wane",
+        "grade": "Titulaire",
+        "specialite": "Génie Logiciel"
+      },
+      {
+        "idProf": 2,
+        "nom": "M. Diouf",
+        "grade": "Assistant",
+        "specialite": "Design UI/UX"
+      }
+    ],
+    "Seances": [
+      {
+        "idSeance": 1,
+        "dateCour": "2024-01-01",
+        "heureDebut": "08:00",
+        "heureFin": "21:00",
+        "type": "présentiel",
+        "idCours": 1
+      },
+      {
+        "idSeance": 2,
+        "dateCour": "2024-01-02",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "présentiel",
+        "idCours": 1
+      }, {
+        "idSeance": 3,
+        "dateCour": "2024-01-03",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "présentiel",
+        "idCours": 1
+      }, {
+        "idSeance": 4,
+        "dateCour": "2024-01-04",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "présentiel",
+        "idCours": 1
+      }, {
+        "idSeance": 5,
+        "dateCour": "2024-01-05",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "ligne",
+        "idCours": 1
+      }, {
+        "idSeance": 6,
+        "dateCour": "2024-01-06",
+        "heureDebut": "09:00",
+        "heureFin": "13:00",
+        "type": "présentiel",
+        "idCours": 1
+      }, {
+        "idSeance": 8,
+        "dateCour": "2024-01-09",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "ligne",
+        "idCours": 1
+      },
+      {
+        "idSeance": 9,
+        "dateCour": "2024-01-10",
+        "heureDebut": "18:00",
+        "heureFin": "12:00",
+        "type": "en ligne",
+        "idCours": 2
+      },
+      {
+        "idSeance": 10,
+        "dateCour": "2024-01-11",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "presentiel",
+        "idCours": 2
+      },
+      
+      {
+        "idSeance": 11,
+        "dateCour": "2024-02-12",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "présentiel",
+        "idCours": 3
+      },
+      {
+        "idSeance": 12,
+        "dateCour": "2024-02-13",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "en ligne",
+        "idCours": 4
+      }
+    ],
+    "Absences": [
+      {
+        "idAbsence": 1,
+        "dateAbsence": "2024-01-01",
+        "idEtudiant": 1
+      },
+      {
+        "idAbsence": 2,
+        "dateAbsence": "2024-01-02",
+        "idEtudiant": 2
+      },
+      {
+        "idAbsence": 3,
+        "dateAbsence": "2024-02-01",
+        "idEtudiant": 3
+      },
+      {
+        "idAbsence": 4,
+        "dateAbsence": "2024-02-02",
+        "idEtudiant": 4
+      }
+    ]
+  }
+  
