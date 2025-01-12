@@ -213,6 +213,20 @@
         "dateAbsence": "2024-02-02",
         "idEtudiant": 4
       }
+    ],
+    
+    "RP": [
+      {
+        "id":"1",
+        "nom":"Modou",
+        "prenom":"Diouflou",
+        "login": "awa@gmail.com",
+        "pwd": "password123",
+        "photo":"Rp.jpg"
+        
+      }
+     
+      
     ]
   }
   
