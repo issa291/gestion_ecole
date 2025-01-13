@@ -181,4 +181,84 @@ semesterFilter.addEventListener('change', (e) => {
 
 fetchCours();
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Récupérer les identifiants stockés
+    const userLogin = localStorage.getItem('login');
+    const userPassword = localStorage.getItem('password');
+    
+    if (!userLogin || !userPassword) {
+        window.location.href = 'index.html';
+        return;
+    }
+
+    // Récupérer les infos de l'utilisateur
+    fetch('http://localhost:3000/Etudiants')
+        .then(response => response.json())
+        .then(data => {
+            const etudiant = data.find(e => e.login === userLogin && e.pwd === userPassword);
+            if (etudiant) {
+                // Afficher le nom dans l'en-tête
+                const profileText = document.querySelector('header .text-right p:first-child');
+                profileText.textContent = `${etudiant.nom} ${etudiant.prenom || ''}`;
+                profileText.classList.add('cursor-pointer', 'hover:text-blue-600');
+                
+                // Gestionnaire de clic pour ouvrir le drawer
+                profileText.addEventListener('click', () => {
+                    updateDrawerContent(etudiant);
+                    openDrawer();
+                });
+            } else {
+                window.location.href = 'index.html';
+            }
+        })
+        .catch(error => {
+            console.error('Erreur:', error);
+            alert("Erreur lors de la récupération des informations");
+        });
+});
+
+
+function updateDrawerContent(etudiant) {
+    const drawerContent = document.getElementById('drawerContent');
+    drawerContent.innerHTML = `
+        <div class="flex justify-center mb-6">
+            <div class="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center">
+                <i class='bx bxs-user text-3xl text-gray-400'></i>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <div class="p-3 bg-gray-50 rounded-lg">
+                <p class="text-sm text-gray-500">Nom complet</p>
+                <p class="font-medium">${etudiant.nom} </p>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-lg">
+                <p class="text-sm text-gray-500">Email</p>
+                <p class="font-medium">${etudiant.login}</p>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-lg">
+                <p class="text-sm text-gray-500">Adresse</p>
+                <p class="font-medium">${etudiant.adresse }</p>
+            </div>
+        </div>
+    `;
+}
+
+
+function openDrawer() {
+    document.getElementById('profileDrawer').classList.remove('translate-x-full');
+}
+
+
+function closeDrawer() {
+    document.getElementById('profileDrawer').classList.add('translate-x-full');
+}
+
+document.getElementById('closeDrawer').addEventListener('click', closeDrawer);
+
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+    localStorage.removeItem('login');
+    localStorage.removeItem('password');
+    window.location.href = 'login.html';
+});
 
